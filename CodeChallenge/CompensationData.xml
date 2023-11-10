@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCompensation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Compensation>
+    <Employee>
+      <EmployeeId>b7839309-3348-463b-a7e3-5de1c168beb3</EmployeeId>
+      <FirstName>Paul</FirstName>
+      <LastName>McCartney</LastName>
+      <Position>Developer I</Position>
+      <Department>Engineering</Department>
+      <DirectReports />
+    </Employee>
+    <Salary>106000</Salary>
+    <EffectiveDate>2024-12-01T00:00:00</EffectiveDate>
+    <EndDate xsi:nil="true" />
+  </Compensation>
+  <Compensation>
+    <Employee>
+      <EmployeeId>16a596ae-edd3-4847-99fe-c4518e82c86f</EmployeeId>
+      <FirstName>John</FirstName>
+      <LastName>Lennon</LastName>
+      <Position>Development Manager</Position>
+      <Department>Engineering</Department>
+      <DirectReports>
+        <Employee>
+          <EmployeeId>b7839309-3348-463b-a7e3-5de1c168beb3</EmployeeId>
+          <DirectReports />
+        </Employee>
+        <Employee>
+          <EmployeeId>03aa1462-ffa9-4978-901b-7c001562cf6f</EmployeeId>
+          <DirectReports />
+        </Employee>
+      </DirectReports>
+    </Employee>
+    <Salary>200000</Salary>
+    <EffectiveDate>2024-01-01T00:00:00</EffectiveDate>
+    <EndDate>2024-02-01T00:00:00</EndDate>
+  </Compensation>
+  <Compensation>
+    <Employee>
+      <EmployeeId>16a596ae-edd3-4847-99fe-c4518e82c86f</EmployeeId>
+      <FirstName>John</FirstName>
+      <LastName>Lennon</LastName>
+      <Position>Development Manager</Position>
+      <Department>Engineering</Department>
+      <DirectReports>
+        <Employee>
+          <EmployeeId>b7839309-3348-463b-a7e3-5de1c168beb3</EmployeeId>
+          <DirectReports />
+        </Employee>
+        <Employee>
+          <EmployeeId>03aa1462-ffa9-4978-901b-7c001562cf6f</EmployeeId>
+          <DirectReports />
+        </Employee>
+      </DirectReports>
+    </Employee>
+    <Salary>230000</Salary>
+    <EffectiveDate>2024-02-01T00:00:00</EffectiveDate>
+    <EndDate>2024-06-01T00:00:00</EndDate>
+  </Compensation>
+  <Compensation>
+    <Employee>
+      <EmployeeId>16a596ae-edd3-4847-99fe-c4518e82c86f</EmployeeId>
+      <FirstName>John</FirstName>
+      <LastName>Lennon</LastName>
+      <Position>Development Manager</Position>
+      <Department>Engineering</Department>
+      <DirectReports>
+        <Employee>
+          <EmployeeId>b7839309-3348-463b-a7e3-5de1c168beb3</EmployeeId>
+          <DirectReports />
+        </Employee>
+        <Employee>
+          <EmployeeId>03aa1462-ffa9-4978-901b-7c001562cf6f</EmployeeId>
+          <DirectReports />
+        </Employee>
+      </DirectReports>
+    </Employee>
+    <Salary>250000</Salary>
+    <EffectiveDate>2024-06-01T00:00:00</EffectiveDate>
+    <EndDate>2024-08-01T00:00:00</EndDate>
+  </Compensation>
+  <Compensation>
+    <Employee>
+      <EmployeeId>16a596ae-edd3-4847-99fe-c4518e82c86f</EmployeeId>
+      <FirstName>John</FirstName>
+      <LastName>Lennon</LastName>
+      <Position>Development Manager</Position>
+      <Department>Engineering</Department>
+      <DirectReports>
+        <Employee>
+          <EmployeeId>b7839309-3348-463b-a7e3-5de1c168beb3</EmployeeId>
+          <DirectReports />
+        </Employee>
+        <Employee>
+          <EmployeeId>03aa1462-ffa9-4978-901b-7c001562cf6f</EmployeeId>
+          <DirectReports />
+        </Employee>
+      </DirectReports>
+    </Employee>
+    <Salary>275000</Salary>
+    <EffectiveDate>2024-08-01T00:00:00</EffectiveDate>
+    <EndDate>2024-09-01T00:00:00</EndDate>
+  </Compensation>
+</ArrayOfCompensation>
