@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "a2d80d3f-f4bd-4a08-aa98-a428b4b3747b",
+		"name": "CodeChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20568455"
+	},
+	"item": [
+		{
+			"name": "/POST Compensation - John Lennon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee\": {\r\n        \"employeeId\": \"16a596ae-edd3-4847-99fe-c4518e82c86f\",\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Lennon\",\r\n        \"position\": \"Development Manager\",\r\n        \"department\": \"Engineering\",\r\n        \"directReports\": [\r\n            {\r\n                \"employeeId\": \"b7839309-3348-463b-a7e3-5de1c168beb3\"\r\n            },\r\n            {\r\n                \"employeeId\": \"03aa1462-ffa9-4978-901b-7c001562cf6f\"\r\n            }\r\n        ]\r\n    },\r\n    \"salary\": \"285000.00\",\r\n    \"effectiveDate\": \"2024-09-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/compensation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"compensation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/POST Compensation - Bad Employee ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee\": {\r\n        \"employeeId\": \"16a596awevcwevwevwe-c4518e82c86f\",\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"Lennon\",\r\n        \"position\": \"Development Manager\",\r\n        \"department\": \"Engineering\",\r\n        \"directReports\": [\r\n            {\r\n                \"employeeId\": \"b7839309-3348-463b-a7e3-5de1c168beb3\"\r\n            },\r\n            {\r\n                \"employeeId\": \"03aa1462-ffa9-4978-901b-7c001562cf6f\"\r\n            }\r\n        ]\r\n    },\r\n    \"salary\": \"275000.00\",\r\n    \"effectiveDate\": \"2024-08-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/compensation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"compensation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/GET Compensation - Paul McCartney",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employee\": {\r\n        \"employeeId\": \"b7839309-3348-463b-a7e3-5de1c168beb3\",\r\n        \"firstName\": \"Paul\",\r\n        \"lastName\": \"McCartney\",\r\n        \"position\": \"Developer I\",\r\n        \"department\": \"Engineering\"\r\n    },\r\n    \"salary\": \"106000.00\",\r\n    \"effectiveDate\": \"2024-12-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/compensation/b7839309-3348-463b-a7e3-5de1c168beb3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"compensation",
+						"b7839309-3348-463b-a7e3-5de1c168beb3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/GET DirectReports - John Lennon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/16a596ae-edd3-4847-99fe-c4518e82c86f/directReports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"16a596ae-edd3-4847-99fe-c4518e82c86f",
+						"directReports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/GET DirectReports - Pete Best",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/62c1084e-6e34-4630-93fd-9153afb65309/directReports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"62c1084e-6e34-4630-93fd-9153afb65309",
+						"directReports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/GET DirectReports - Invalid ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/62c1089153afb65309/directReports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						"62c1089153afb65309",
+						"directReports"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
