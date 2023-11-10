@@ -15,11 +15,13 @@ namespace CodeChallenge.Controllers
     {
         private readonly ILogger _logger;
         private readonly IEmployeeService _employeeService;
+        private readonly IDirectReportsService _directReportsService;
 
-        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeService employeeService)
+        public EmployeeController(ILogger<EmployeeController> logger, IEmployeeService employeeService, IDirectReportsService directReportsService)
         {
             _logger = logger;
             _employeeService = employeeService;
+            _directReportsService = directReportsService;
         }
 
         [HttpPost]
@@ -57,6 +59,20 @@ namespace CodeChallenge.Controllers
             _employeeService.Replace(existingEmployee, newEmployee);
 
             return Ok(newEmployee);
+        }
+
+        [HttpGet]
+        [Route("{id}/directReports")]  
+        public IActionResult GetDirectReportsById(String id)
+        {
+            _logger.LogDebug($"Received direct reports get request for '{id}'");
+
+            var reportingStructure = _directReportsService.GetById(id);
+
+            if (reportingStructure == null)
+                return NotFound();
+
+            return Ok(reportingStructure);
         }
     }
 }
